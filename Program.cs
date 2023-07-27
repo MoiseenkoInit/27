@@ -1,15 +1,17 @@
-﻿//Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-//3, 5 -> 243 (3⁵)
-//2, 4 -> 16
-Console.Clear();
-Console.WriteLine("введите число a");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("введите число b");
-int b = Convert.ToInt32(Console.ReadLine());
-int grade = a;
+﻿//Задача 27: Напишите программу, которая принимает 
+//на вход число и выдаёт сумму цифр в числе.
+//452 -> 11
+//82 -> 10
+//9012 -> 12
 
-for (int i = 1; i < b; i++)
+Console.Write("Input N: ");
+int N = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+
+while (N > 0)
 {
-grade = grade * a;
+    int k = N % 10;
+    N = N / 10;
+    sum = sum + k;
 }
-Console.WriteLine("a в степени b равно: " + grade);
+Console.Write("sum of fingers " + sum);
